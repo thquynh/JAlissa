@@ -1,0 +1,449 @@
+@font-face {
+    font-family: avenir;
+    src: url("/assets/fonts/Avenir LT 35 Light.ttf");
+}
+
+@font-face {
+    font-family: cinzel;
+    src: url("/assets/fonts/cinzel.regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 102px;
+    --color_1: #273A4E;
+    --container-height: 1300px;
+    --color_2: #f0f3f6;
+    --about-height: 880px;
+    --book-height: 720px;
+    --color_3: gray;
+}
+
+html {
+    font-family: avenir, sans-serif;
+    font-size: 16px;
+}
+
+.title {
+    font-family: cinzel, serif;
+    font-size: 40px;
+    font-weight: unset;
+    padding: 20px;
+    text-align: center;
+    height: 93px;
+}
+
+.header {
+    height: var(--header-height);    
+    position: fixed;
+    background-color: #fff;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+}
+
+.header .nav-bar {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.header2 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    border: 0 !important;
+}
+
+.nav-bar .shop-name {
+    line-height: var(--header-height);
+    font-family: cinzel, serif;
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 6px;
+}
+
+.nav-bar .nav-list {
+    overflow: hidden;
+    margin-left: -10px;
+    
+}
+
+.nav-list .nav-list-item {
+    list-style: none;
+    float: left;
+    line-height: var(--header-height);
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-list-item a:hover {
+    color: var(--color_3);
+}
+
+.shop-name a,
+.nav-list a,
+.social-media-item a,
+.credit a,
+.title-container a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    width: 100%;
+    margin-top: var(--header-height);
+}
+
+.container-height {
+    height: var(--container-height);
+}
+
+.container .main-img {
+    background-image: url("/assets/img/main/intro.webp");
+    width:  90%; 
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    opacity: 0.9;
+}
+
+.container .main-text {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 38%; 
+    text-align: center;
+    width: 60%;
+    color: #fff;
+}
+
+.container h1 {
+    font-family: cinzel, serif;
+    font-weight: unset;
+    font-size: 70px;
+    padding: 5px;
+}
+
+.container h3 {
+    font-weight: unset;
+    font-size: 20px;
+    letter-spacing: 12px;
+    padding: 5px;
+}
+
+.cards .button,
+.container .button {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.view-button {
+    background: transparent;
+    border-style: unset;
+    border: solid 1px #fff;
+    color: #fff;
+    width: 140px;
+    height: 36px;
+}
+
+.submit-button,
+.subscribe-button,
+.view-button:hover {
+    cursor: pointer;
+    background: var(--color_1);
+    border-color: var(--color_1);
+}
+
+.footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer .social-media-list {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.social-media-list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.social-media-list ul li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-media-item {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 10px;
+}
+
+/* About Page */
+.self-introduction {
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color_2);
+}
+
+.introduction-content {
+    height: var(--about-height);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introduction-content .title {
+    text-align: left !important;
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+.about-content span {
+    font-size: 20px;
+}
+.self-picture {
+    background-image: url('/assets/img/about/about.webp');
+    height: var(--about-height);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+/* Porfolio Page */
+
+.container .cards-view {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards-view .cards {
+    color: #fff;
+    height: var(--about-height);
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    text-align: center;
+}
+
+.cards .title {
+    margin-top: 70px;
+}
+
+.cards-view .card1 {
+    background-image: url("/assets/img/porfolio/first.webp");
+    height: var(--about-height);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    flex-grow: 1;
+    margin-left: -2.5px;
+}
+
+.cards-view .card2 {
+    background-image: url("/assets/img/porfolio/second.webp");
+    height: var(--about-height);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    flex-grow: 1;
+}
+
+.cards-view .card3 {
+    background-image: url("/assets/img/porfolio/third.webp");
+    height: var(--about-height);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    flex-grow: 1;
+    margin-right: -2.5px;
+}
+
+/* Sub Pages Porfolio */
+.title-container {
+    position: relative;
+    align-items: center;
+}
+
+.title-container .return-porfolio {
+    position: absolute;
+    left: calc(100% / 5);
+    bottom: calc(93px / 2.5);
+    align-self: center;
+}
+
+
+
+
+/* Contact */
+.contact-content {
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color_2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-form-container {
+    height: var(--about-height);
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form-container {
+    height: var(--container-height);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form-container .title {
+    text-align: left !important;
+    margin-left: 100px;
+    margin-right: 130px;
+}
+
+.contact-img{
+    background-image: url("/assets/img/contact/contact.webp");
+    height: var(--container-height);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    flex-grow: 1;
+}
+
+.subscribe-form,
+.contact-intro, 
+.contact-form {
+    margin-left: 120px;
+    margin-right: 150px;
+}
+
+.subscribe-form,
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 5px;
+}
+
+.contact-input {
+    padding: 5px 10px;
+    margin: 5px 0;
+    background: transparent;
+    border-style: unset;
+    border: solid 1px #000;
+    font-family: avenir, sans-serif;
+    height: 36px;
+    width: 100%;
+}
+
+#message {
+    padding: 5px 10px;
+    margin: 5px 0;
+    background: transparent;
+    border-style: unset;
+    border: solid 1px #000;
+    font-family: avenir, sans-serif;
+    line-height: 1.5;
+}
+
+.submit-button-container {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.submit-button, 
+.subscribe-button {
+    align-content: flex-end;
+    border-style: unset;
+    border: solid 0px;
+    color: #fff;
+    width: 140px;
+    height: 36px;
+    font-family: avenir, sans-serif;
+    padding: 10px;
+}
+
+.submit-button:hover,
+.subscribe-button:hover {
+    background-color: var(--color_3);
+}
+
+.subscribe-form {
+    margin-top: 60px;
+}
+
+.subscribe-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#subscribe-email {
+    margin-right: 2px;
+}
+
+
+
+
